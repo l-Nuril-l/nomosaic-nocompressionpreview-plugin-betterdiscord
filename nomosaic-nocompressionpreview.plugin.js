@@ -1,11 +1,12 @@
 /**
- * @name NoMosaic
+ * @name NoMosaicNoCompressionPreview
  * @author Tanza
  * @description No more mosaic!
  * @version 0.0.1
+ * @updateUrl https://raw.githubusercontent.com/l-Nuril-l/nomosaic-nocompressionpreview-plugin-betterdiscord/main/nomosaic-nocompressionpreview.plugin.js
  */
 
-module.exports = class MyPlugin {
+module.exports = class NoMosaicNoCompressionPreview {
     observer = null;
     css = null;
     constructor(meta) {
@@ -61,7 +62,7 @@ module.exports = class MyPlugin {
 
         // Callback function to execute when mutations are observed
         const callback = (mutationList, observer) => {
-            var ellist = document.querySelectorAll(".lazyImg-ewiNCh, .video-2HW4jD");
+            var ellist = document.querySelectorAll(".lazyImg-ewiNCh, .video-2HW4jD, .originalLink-Azwuo9, .image-36HiZc > img");
             for (var element of ellist) {
                 if (!element.hasAttribute("uncropped")) {
                     if (element.src != undefined) {
